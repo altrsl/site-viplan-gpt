@@ -9,6 +9,10 @@ export const metadata: Metadata = {
     template: "%s | Viplan",
   },
   description: "Site institucional da Viplan Vidros Temperados.",
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({

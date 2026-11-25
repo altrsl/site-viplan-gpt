@@ -24,7 +24,7 @@ export function SiteHeader() {
             alt=""
             aria-hidden="true"
             className="brand-placeholder__symbol"
-            src="https://raw.githubusercontent.com/altrsl/site-viplan-gpt/main/logo/Logo%20Viplan.png"
+            src="/favicon.ico"
           />
           <span className="brand-placeholder__name">Viplan</span>
         </Link>
