@@ -117,14 +117,26 @@ Não está prevista, neste primeiro ciclo, a construção de e-commerce, pagamen
 
 ## 8. Etapas de desenvolvimento
 
-0. Planejamento técnico, arquitetura, requisitos e documentação.
-1. Fundação do projeto, configuração de ferramentas e implementação da base visual.
-2. Página inicial.
-3. Páginas internas e navegação.
-4. Backend, banco de dados, autenticação e armazenamento.
-5. Painel administrativo e fluxo editorial.
-6. Integrações comerciais e formulários.
-7. Testes integrados, segurança, SEO, desempenho e preparação para publicação.
+O projeto será conduzido em duas fases maiores. A primeira é dedicada à apresentação visual e deve ser validada antes de investir na infraestrutura de produção.
+
+### Fase A — Front-end e apresentação
+
+0. Planejamento, arquitetura mínima e documentação.
+1. Fundação do front-end, configuração de ferramentas e identidade visual.
+2. Página inicial e refinamento da linguagem visual.
+3. Páginas internas, navegação, responsividade e interações de apresentação.
+4. Revisão visual geral, acessibilidade e desempenho do front-end.
+
+Durante esta fase, poderão ser usados dados locais e imagens provisórias claramente identificados. Não implementar persistência, autenticação ou envio real de formulários.
+
+### Fase B — Infraestrutura e produção (adiada)
+
+5. Avaliar e escolher hospedagem, backend, banco de dados, autenticação e armazenamento.
+6. Implementar painel administrativo e fluxo editorial.
+7. Implementar integrações comerciais, formulários e e-mail.
+8. Testes integrados, segurança, SEO técnico e preparação para publicação.
+
+A Fase B será replanejada quando a apresentação visual estiver próxima da expectativa aprovada pelo responsável pelo projeto. Hospedagem e serviços externos não devem ser contratados antes dessa revisão.
 
 Cada etapa deve terminar com revisão, testes pertinentes, correções, atualização documental e commit.
 
