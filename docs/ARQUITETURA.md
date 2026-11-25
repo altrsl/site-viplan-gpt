@@ -1,100 +1,81 @@
-# Arquitetura técnica — proposta e decisões
+# Arquitetura técnica — desenvolvimento em etapas
 
-## 1. Objetivo deste documento
+## 1. Estratégia aprovada
 
-Registrar a arquitetura candidata para o site VIplan, distinguir propostas de decisões confirmadas e listar validações necessárias antes de iniciar a aplicação.
+O desenvolvimento será dividido em duas grandes frentes:
 
-## 2. Arquitetura candidata
+1. **Primeiro: front-end e apresentação visual.** Construir e validar a experiência pública do site, suas páginas, navegação, componentes, imagens, responsividade e interações de interface.
+2. **Depois: infraestrutura e funcionalidades de produção.** Quando a apresentação estiver próxima da expectativa aprovada, avaliar hospedagem, backend, banco de dados, autenticação, painel administrativo, armazenamento, e-mail e integrações.
 
-A proposta inicial é uma aplicação web moderna com renderização otimizada, conteúdo institucional público e uma área administrativa protegida.
+A segunda frente está adiada intencionalmente e não deve bloquear o trabalho visual.
 
-| Camada | Proposta inicial | Situação |
+## 2. Base candidata do front-end
+
+| Camada | Opção candidata | Situação |
 |---|---|---|
-| Framework web | Next.js com React | Candidata |
+| Framework | Next.js com React | Candidata |
 | Linguagem | TypeScript | Candidata |
-| Estilização | Tailwind CSS | Candidata |
-| Banco de dados | PostgreSQL | Candidata |
-| Backend gerenciado | Supabase | Candidato |
-| Autenticação | Supabase Auth | Candidata |
-| Arquivos | Supabase Storage | Candidato |
-| Hospedagem | A definir | Em avaliação |
-| E-mail transacional | A definir | Em avaliação |
+| Estilização | Tailwind CSS ou equivalente | A confirmar na fundação |
+| Componentes | Componentes reutilizáveis e acessíveis | Diretriz |
 | Versionamento | GitHub | Confirmado |
 
-A combinação Next.js + Supabase é uma hipótese de trabalho, não uma obrigação. A escolha final deve considerar compatibilidade de runtime, recursos necessários, limites dos planos gratuitos, custo de produção e facilidade de manutenção.
+A escolha final da base deve favorecer iteração rápida, boa organização, responsividade, acessibilidade e possibilidade de integração posterior com serviços de backend.
 
-## 3. Diretrizes de aplicação
+## 3. Escopo técnico da fase visual
 
-- Separar claramente a experiência pública da área administrativa.
-- Manter componentes de interface reutilizáveis e acessíveis.
-- Separar apresentação, regras de negócio e acesso a dados.
-- Validar dados no servidor, mesmo quando houver validação no cliente.
-- Aplicar autorização em cada operação administrativa.
-- Utilizar políticas de acesso no banco/armazenamento quando suportadas.
-- Não expor chaves privilegiadas no navegador.
-- Usar migrações versionadas para alterações no banco.
-- Manter configurações específicas por ambiente fora do código.
+Nesta fase, o projeto pode incluir:
+- estrutura de páginas e navegação;
+- cabeçalho, rodapé e componentes compartilhados;
+- layouts responsivos;
+- identidade visual, tipografia, paleta e grafismos;
+- galerias e áreas de apresentação de produtos/projetos;
+- estados visuais de botões, links, menus e formulários;
+- microinterações e animações moderadas;
+- dados locais demonstrativos para alimentar componentes;
+- conteúdo e imagens provisórios, claramente identificados;
+- ajustes de acessibilidade e desempenho do front-end.
 
-## 4. Modelo funcional preliminar
+Formulários poderão ter apenas apresentação e validação local, sem prometer envio real. Botões de WhatsApp, redes sociais e outros destinos só devem apontar para dados oficiais confirmados; enquanto isso, usar estados demonstrativos ou deixar a integração pendente.
 
-Entidades que provavelmente serão necessárias:
-- usuários e perfis de acesso;
-- páginas e blocos de conteúdo;
-- categorias e produtos;
-- projetos;
-- arquivos de mídia;
-- configurações gerais e SEO;
-- registros de auditoria;
-- mensagens e solicitações de orçamento.
+## 4. Preparação para integração futura
 
-O esquema definitivo será elaborado durante a etapa de backend, após validação do fluxo editorial e das permissões.
+Mesmo sem implementar backend agora:
+- manter conteúdo e dados demonstrativos separados dos componentes visuais;
+- evitar acoplar componentes a um fornecedor de banco ou autenticação;
+- definir interfaces e tipos que possam receber dados reais posteriormente;
+- separar elementos de apresentação de regras de negócio;
+- documentar pontos que futuramente precisarão de integração;
+- não simular segurança ou persistência real.
 
-## 5. Segurança e permissões
+O painel administrativo funcional, login real e publicação de conteúdo não fazem parte da fase visual.
 
-- Autenticação por serviço consolidado.
-- Perfis e permissões com princípio do menor privilégio.
-- Verificação de autorização no servidor em todas as rotas e ações sensíveis.
-- Proteção contra acesso indevido a registros e arquivos.
-- Validação de tipo, tamanho e conteúdo dos uploads.
-- Rate limiting e medidas anti-spam nos formulários.
-- Logs sem dados pessoais desnecessários ou segredos.
-- Processo documentado para recuperação e revogação de acesso.
+## 5. Infraestrutura — adiada
 
-## 6. Hospedagem e custos — decisão pendente
+As seguintes decisões serão retomadas quando o front-end estiver próximo da aprovação visual:
+- provedor de hospedagem;
+- banco de dados e backend;
+- autenticação e autorização;
+- armazenamento de imagens;
+- e-mail transacional;
+- integração real de formulários e solicitações de orçamento;
+- domínio, publicação e monitoramento;
+- backups, retenção, privacidade e custos operacionais.
 
-A hospedagem não será escolhida apenas pelo preço anunciado. A avaliação deverá considerar:
-- uso comercial permitido nos termos do plano;
-- suporte ao runtime e às funcionalidades do framework;
-- limites de tráfego, execução, armazenamento e build;
-- comportamento ao atingir cotas;
-- disponibilidade, backups e recuperação;
-- região e latência;
-- custos de domínio, e-mail e serviços adicionais;
-- facilidade de migração e dependência do fornecedor.
+Não contratar serviços, criar contas pagas ou inserir credenciais nesta etapa.
 
-Planos gratuitos podem ter limites, suspensão por inatividade ou restrições de uso comercial. Confirmar os termos vigentes diretamente na documentação oficial antes de decidir.
+## 6. Segurança e qualidade durante o front-end
 
-## 7. Decisões necessárias antes da Etapa 1
+- Não versionar tokens, senhas ou arquivos de ambiente com segredos.
+- Não inserir dados pessoais ou institucionais fictícios como se fossem reais.
+- Não criar formulários que aparentem enviar mensagens se não houver integração.
+- Garantir navegação por teclado, foco visível, contraste e HTML semântico.
+- Respeitar preferência por redução de movimento.
+- Testar desktop, tablet e celular.
+- Otimizar imagens e evitar dependências desnecessárias.
 
-1. Confirmar framework e estratégia de renderização.
-2. Confirmar backend, banco, autenticação e armazenamento.
-3. Comparar hospedagem compatível com a arquitetura escolhida e uso comercial.
-4. Definir limite aceitável de custo mensal e quem será responsável pelas contas.
-5. Definir serviço de e-mail e destino dos formulários.
-6. Definir domínio e estratégia de publicação.
-7. Confirmar política de backup, retenção e recuperação.
+## 7. Registro de decisão
 
-## 8. Gestão de segredos
-
-- Nunca versionar arquivos `.env` reais.
-- Manter `.env.example` somente com nomes de variáveis e valores fictícios ou vazios.
-- Configurar segredos diretamente no ambiente de hospedagem.
-- Separar chaves públicas de chaves privadas.
-- Rotacionar imediatamente qualquer credencial exposta.
-
-## 9. Registro de decisão
-
-**Estado:** arquitetura em avaliação.  
-**Stack candidata:** Next.js + TypeScript + Tailwind CSS + Supabase/PostgreSQL.  
-**Hospedagem:** não definida.  
-**Motivo para manter em aberto:** evitar escolher serviço incompatível ou gerar custo recorrente sem conhecer o orçamento e os limites de uso.
+**Prioridade atual:** front-end e apresentação visual.  
+**Stack candidata:** Next.js + React + TypeScript, com Tailwind CSS ou alternativa adequada.  
+**Backend e hospedagem:** adiados para fase posterior, por decisão do responsável pelo projeto.  
+**Critério para retomar infraestrutura:** apresentação visual do site próxima da expectativa aprovada.
