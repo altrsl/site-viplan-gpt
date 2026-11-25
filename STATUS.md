@@ -1,7 +1,7 @@
 # Status do projeto — VIplan
 
-**Etapa atual:** 1 — Fundação do front-end  
-**Situação:** fundação inicial registrada; validação local pendente  
+**Etapa atual:** 2 — Página inicial e refinamento da linguagem visual  
+**Situação:** primeira proposta visual da home registrada; validação em navegador pendente  
 **Repositório:** `altrsl/site-viplan-gpt`  
 **Branch:** `main`
 
@@ -9,30 +9,36 @@
 
 Prioridade aprovada: desenvolver e validar primeiro a apresentação visual do site. Hospedagem, backend, banco de dados, autenticação, painel administrativo funcional, armazenamento definitivo, e-mail e integrações de produção permanecem adiados.
 
-## Entregas realizadas
+## Entregas registradas
 
 - [x] Planejamento, arquitetura mínima e diretrizes visuais documentados.
-- [x] Criada a estrutura inicial Next.js + React + TypeScript.
-- [x] Configurada a base de estilos com Tailwind CSS 4.
-- [x] Criados layout global, cabeçalho, rodapé e página inicial estrutural.
-- [x] Definidos tokens iniciais de cor alinhados à paleta aprovada, ainda sujeitos à conferência com o manual/arquivo oficial.
-- [x] Incluídos foco visível e respeito à preferência por redução de movimento.
-- [ ] Validar instalação, lint, TypeScript e build em ambiente local.
-- [ ] Confirmar os arquivos oficiais de logo e aplicar o SVG sem alterações.
-- [ ] Refinar a direção visual da página inicial com feedback do responsável.
+- [x] Base inicial Next.js + React + TypeScript.
+- [x] Tailwind CSS 4 configurado.
+- [x] Layout global, cabeçalho, rodapé e página inicial.
+- [x] Cabeçalho responsivo com menu móvel acessível.
+- [x] Nova proposta visual da página inicial com composição editorial, transparências, faixas diagonais, paleta aprovada e chamadas para navegação.
+- [x] Seções de apresentação institucional, áreas do site, qualidade e contato.
+- [x] Estados de foco visíveis e suporte a preferência por redução de movimento.
+- [ ] Executar instalação, lint, TypeScript e build em ambiente local.
+- [ ] Validar a página em navegadores e larguras reais.
+- [ ] Aplicar o arquivo oficial de logotipo após resolver a dependência externa do SVG.
+- [ ] Receber e integrar fotografias institucionais/produtos/projetos aprovadas.
 
-## Observação sobre os arquivos de logotipo
+## Logotipo — observação técnica
 
-Na consulta atual ao diretório `logo/` da branch `main`, a integração do GitHub retornou somente `.gitkeep`. Os arquivos SVG e PDF mencionados ainda não estão visíveis para este ambiente. Não foi criado nem adaptado um logotipo substituto.
+Os arquivos `logo/Logo Viplan.svg` e `logo/Logo Viplan.pdf` estão presentes na branch `main`.
 
-## Pendências e limites desta fase
+O SVG contém uma referência a uma imagem raster externa chamada `Logo Viplan_Images\\Logo Viplan_ImgID1.png`, que não está presente no diretório versionado. Portanto, o SVG não é autossuficiente para uso direto no navegador. O PDF foi mantido como original de referência. Não foi redesenhado nem alterado o logotipo. O cabeçalho ainda usa lettering provisório até que seja possível aplicar o ativo oficial completo.
 
-- A página inicial é uma estrutura visual inicial, não uma versão final aprovada.
-- O lettering textual provisório no cabeçalho deverá ser substituído pelo arquivo oficial do logotipo quando disponível.
-- As rotas internas ainda não foram implementadas.
-- Textos e destinos de navegação ainda são estruturais; não há envio real de formulários nem integrações.
-- Nenhum teste local foi executado neste ambiente.
+## Pendências e limites
+
+- A proposta da página inicial é uma primeira direção para avaliação, não uma versão final aprovada.
+- As rotas internas ainda precisam ser implementadas.
+- Os textos são introdutórios e deverão ser validados pela VIplan antes da publicação.
+- Não há imagens reais de fabricação, produtos ou projetos integradas.
+- Os links internos da navegação apontam para páginas a serem construídas nas próximas etapas.
+- Nenhum teste local foi executado neste ambiente; não declarar build ou lint aprovados.
 
 ## Próxima tarefa
 
-Validar a fundação em ambiente local e confirmar a sincronização dos arquivos de logotipo. Em seguida, iniciar a etapa de refinamento da página inicial.
+Revisar visualmente a página inicial em navegador, recolher feedback e ajustar a composição. Em paralelo, solicitar/exportar uma versão autossuficiente do logotipo (SVG com imagem incorporada ou PNG transparente) para aplicação fiel no cabeçalho.
