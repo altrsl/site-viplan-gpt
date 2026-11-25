@@ -1,70 +1,38 @@
 # Status do projeto — VIplan
 
-**Etapa atual:** 0 — Planejamento e preparação do front-end  
-**Situação:** em andamento  
+**Etapa atual:** 1 — Fundação do front-end  
+**Situação:** fundação inicial registrada; validação local pendente  
 **Repositório:** `altrsl/site-viplan-gpt`  
 **Branch:** `main`
 
-## Direcionamento atualizado
+## Direcionamento
 
-Prioridade aprovada: desenvolver primeiro a apresentação visual do site e validar a experiência do front-end até alcançar a expectativa do responsável pelo projeto.
+Prioridade aprovada: desenvolver e validar primeiro a apresentação visual do site. Hospedagem, backend, banco de dados, autenticação, painel administrativo funcional, armazenamento definitivo, e-mail e integrações de produção permanecem adiados.
 
-Hospedagem, backend, banco de dados, autenticação, armazenamento definitivo, e-mail e custos recorrentes ficam deliberadamente adiados. Não são bloqueios para a fase visual.
+## Entregas realizadas
 
-Durante a construção do front-end, poderão ser usados dados e imagens provisórios, sempre identificados como tais e preparados para substituição posterior.
+- [x] Planejamento, arquitetura mínima e diretrizes visuais documentados.
+- [x] Criada a estrutura inicial Next.js + React + TypeScript.
+- [x] Configurada a base de estilos com Tailwind CSS 4.
+- [x] Criados layout global, cabeçalho, rodapé e página inicial estrutural.
+- [x] Definidos tokens iniciais de cor alinhados à paleta aprovada, ainda sujeitos à conferência com o manual/arquivo oficial.
+- [x] Incluídos foco visível e respeito à preferência por redução de movimento.
+- [ ] Validar instalação, lint, TypeScript e build em ambiente local.
+- [ ] Confirmar os arquivos oficiais de logo e aplicar o SVG sem alterações.
+- [ ] Refinar a direção visual da página inicial com feedback do responsável.
 
-## Entregas da Etapa 0
+## Observação sobre os arquivos de logotipo
 
-- [x] Confirmar repositório, visibilidade, branch padrão e permissão de escrita.
-- [x] Registrar objetivo, princípios e escopo funcional inicial.
-- [x] Registrar diretrizes visuais e regras de preservação da marca.
-- [x] Registrar instruções de continuidade para agentes e colaboradores.
-- [x] Ajustar a sequência do projeto para priorizar front-end.
-- [ ] Definir e registrar a base técnica mínima do front-end.
-- [ ] Reunir o logotipo oficial e materiais visuais disponíveis.
-- [ ] Finalizar o planejamento de execução da Etapa 1.
+Na consulta atual ao diretório `logo/` da branch `main`, a integração do GitHub retornou somente `.gitkeep`. Os arquivos SVG e PDF mencionados ainda não estão visíveis para este ambiente. Não foi criado nem adaptado um logotipo substituto.
 
-## Decisões aprovadas
+## Pendências e limites desta fase
 
-- Desenvolvimento incremental por etapas, com verificação e documentação a cada entrega.
-- Primeiro foco: front-end, composição visual, páginas, navegação, responsividade e interações de apresentação.
-- Páginas previstas: Início, Sobre, Fabricação, Produtos, Projetos, Qualidade e Contato.
-- Direção visual acolhedora, dinâmica e contemporânea, preservando a identidade oficial VIplan.
-- Paleta aprovada: azul, ciano, verde e amarelo.
-- Não utilizar segundo bloco de navegação com ícones circulares no estilo dos destaques do Instagram.
-- Infraestrutura e serviços de produção serão avaliados quando a apresentação do site estiver próxima da expectativa desejada.
-
-## Proposta técnica para o front-end
-
-- Next.js com React.
-- TypeScript.
-- Tailwind CSS ou solução equivalente, a confirmar na fundação do projeto.
-
-A escolha deverá privilegiar velocidade de iteração visual, responsividade, organização dos componentes e facilidade de integração posterior. Não implementar backend nesta fase.
-
-## Itens adiados intencionalmente
-
-- Hospedagem e publicação de produção.
-- Banco de dados e backend.
-- Autenticação e painel administrativo funcional.
-- Armazenamento definitivo de arquivos.
-- Serviço de e-mail, formulários com envio real e integrações comerciais.
-- Orçamento e contratação de serviços externos.
-
-Esses itens permanecem no escopo futuro, mas não serão pesquisados ou contratados agora.
-
-## Materiais necessários
-
-- Arquivo original do logotipo em boa qualidade (preferencialmente SVG ou PNG transparente).
-- Fotografias oficiais da empresa, fabricação, produtos e projetos, conforme disponibilidade.
-- Textos institucionais e dados de contato confirmados para substituir conteúdos demonstrativos.
-
-## Problemas conhecidos
-
-- O repositório ainda não contém a aplicação; possui apenas documentação e commit inicial.
-- O arquivo original do logotipo ainda precisa ser disponibilizado neste projeto.
-- Conteúdos e imagens finais ainda não foram reunidos.
+- A página inicial é uma estrutura visual inicial, não uma versão final aprovada.
+- O lettering textual provisório no cabeçalho deverá ser substituído pelo arquivo oficial do logotipo quando disponível.
+- As rotas internas ainda não foram implementadas.
+- Textos e destinos de navegação ainda são estruturais; não há envio real de formulários nem integrações.
+- Nenhum teste local foi executado neste ambiente.
 
 ## Próxima tarefa
 
-Fechar a base mínima do front-end e iniciar a Etapa 1 — Fundação do projeto e estrutura visual. Não iniciar hospedagem, backend ou serviços externos nesta fase.
+Validar a fundação em ambiente local e confirmar a sincronização dos arquivos de logotipo. Em seguida, iniciar a etapa de refinamento da página inicial.

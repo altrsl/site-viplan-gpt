@@ -2,30 +2,38 @@
 
 Repositório do novo site institucional da **VIplan Vidros Temperados**.
 
-## Objetivo
+## Prioridade atual
 
-Construir um site moderno, responsivo, acessível e administrável, que apresente a empresa, seu processo de fabricação, catálogo de produtos, projetos e canais de contato.
+Desenvolvimento e validação do front-end e da apresentação visual. Hospedagem, backend, banco de dados, autenticação, painel administrativo funcional e integrações de produção estão adiados até a aprovação visual.
 
-O projeto será desenvolvido por etapas. Cada etapa deve ser planejada, implementada, verificada, documentada e registrada em commit antes de avançar.
+## Stack inicial
 
-## Situação atual
+- Next.js 15 (App Router)
+- React 19
+- TypeScript
+- Tailwind CSS 4
 
-**Etapa 0 — Planejamento técnico, arquitetura e documentação.**
+## Executar localmente
 
-Nenhuma aplicação ou funcionalidade de produção foi implementada ainda. Consulte [STATUS.md](./STATUS.md) para o andamento e [docs/PLANEJAMENTO.md](./docs/PLANEJAMENTO.md) para o escopo.
+Requer Node.js 20.9 ou superior.
 
-## Estrutura documental
+```bash
+npm install
+npm run dev
+```
 
-- [CLAUDE.md](./CLAUDE.md): instruções permanentes para agentes e colaboradores.
-- [STATUS.md](./STATUS.md): etapa atual, entregas, pendências e próxima ação.
-- [docs/PLANEJAMENTO.md](./docs/PLANEJAMENTO.md): objetivos, escopo, páginas e requisitos.
-- [docs/ARQUITETURA.md](./docs/ARQUITETURA.md): arquitetura proposta e decisões ainda em aberto.
-- [docs/DIRETRIZES-VISUAIS.md](./docs/DIRETRIZES-VISUAIS.md): identidade, linguagem visual e experiência.
+Acesse http://localhost:3000.
 
-## Princípios do projeto
+## Scripts
 
-1. Preservar a identidade oficial da VIplan e o logotipo original.
-2. Não inventar dados institucionais, contatos, especificações técnicas ou projetos.
-3. Priorizar segurança, acessibilidade, desempenho, SEO e experiência mobile.
-4. Não incluir segredos, tokens ou credenciais no repositório.
-5. Não avançar de etapa sem concluir e verificar as entregas da etapa atual.
+- `npm run dev`: servidor de desenvolvimento.
+- `npm run build`: build de produção local.
+- `npm run start`: servidor para build local.
+- `npm run lint`: análise estática com ESLint.
+- `npm run typecheck`: verificação de tipos TypeScript.
+
+## Identidade e conteúdo
+
+O logotipo oficial deve ser aplicado a partir do arquivo original, sem alterações. Materiais provisórios devem ser substituídos por conteúdo e imagens aprovados pela VIplan. Não inserir dados institucionais não confirmados.
+
+Consulte `STATUS.md` e `docs/` para decisões, diretrizes e andamento.
