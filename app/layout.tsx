@@ -5,10 +5,10 @@ import { SiteFooter } from "@/components/site-footer";
 
 export const metadata: Metadata = {
   title: {
-    default: "VIplan | Vidros Temperados",
-    template: "%s | VIplan",
+    default: "Viplan | Vidros Temperados",
+    template: "%s | Viplan",
   },
-  description: "Site institucional da VIplan Vidros Temperados.",
+  description: "Site institucional da Viplan Vidros Temperados.",
 };
 
 export default function RootLayout({
