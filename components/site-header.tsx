@@ -20,6 +20,12 @@ export function SiteHeader() {
           className="brand-placeholder shrink-0"
           href="/"
         >
+          <img
+            alt=""
+            aria-hidden="true"
+            className="brand-placeholder__symbol"
+            src="https://raw.githubusercontent.com/altrsl/site-viplan-gpt/main/logo/Logo%20Viplan.png"
+          />
           <span className="brand-placeholder__name">Viplan</span>
         </Link>
 
