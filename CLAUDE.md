@@ -2,7 +2,13 @@
 
 ## Missão
 
-Desenvolver o site institucional da VIplan Vidros Temperados neste repositório, com qualidade visual e técnica, administração de conteúdo segura e evolução incremental.
+Desenvolver o site institucional da VIplan Vidros Temperados com qualidade visual e técnica, preservação da identidade da marca e evolução incremental.
+
+## Prioridade atual do projeto
+
+A prioridade aprovada é o **front-end**. Concentre o trabalho inicial na apresentação visual, páginas, navegação, responsividade, componentes e interações de interface.
+
+Não antecipar hospedagem, backend, banco de dados, autenticação, painel administrativo funcional, armazenamento definitivo, e-mail ou integrações de produção. Esses assuntos serão retomados quando a apresentação visual estiver próxima da expectativa do responsável pelo projeto.
 
 ## Regras obrigatórias de trabalho
 
@@ -32,15 +38,13 @@ Desenvolver o site institucional da VIplan Vidros Temperados neste repositório,
 - Quando uma informação não estiver disponível, marcar como pendente e solicitar confirmação.
 - Identificar claramente imagens e textos provisórios que precisem ser substituídos ou validados.
 - Não publicar conteúdo fictício como se fosse real.
+- Durante o protótipo visual, dados demonstrativos devem ficar separados dos componentes e ser claramente identificados.
 
 ## Segurança
 
 - Nunca inserir chaves, tokens, senhas ou credenciais no código ou em commits.
-- Usar variáveis de ambiente e manter apenas um arquivo `.env.example` com nomes e valores ilustrativos não secretos.
-- Aplicar autorização no servidor e validar permissões em toda operação administrativa.
-- Não confiar em controles de interface como única barreira de segurança.
-- Validar e sanitizar entradas; proteger formulários contra abuso; tratar uploads com validação de tipo, tamanho e acesso.
-- Senhas e sessões devem ser geridas por solução de autenticação apropriada, sem implementação criptográfica caseira.
+- Não simular autenticação, persistência ou envio real de formulários.
+- Quando a fase de backend começar, usar variáveis de ambiente e manter apenas um arquivo `.env.example` com nomes e valores ilustrativos não secretos.
 - Não expor dados administrativos ou chaves privadas no cliente.
 
 ## Qualidade
@@ -49,7 +53,7 @@ Desenvolver o site institucional da VIplan Vidros Temperados neste repositório,
 - Manter componentes e módulos coesos, reutilizáveis e acessíveis.
 - Garantir navegação por teclado, foco visível, contraste adequado, HTML semântico e textos alternativos úteis.
 - Verificar responsividade em desktop, tablet e mobile.
-- Considerar SEO técnico, metadados por página, Open Graph, sitemap e robots.txt.
+- Considerar SEO técnico no momento apropriado, sem antecipar infraestrutura.
 - Documentar decisões arquiteturais relevantes e mudanças de dependências.
 
 ## Processo e comunicação
@@ -58,4 +62,4 @@ Desenvolver o site institucional da VIplan Vidros Temperados neste repositório,
 - Commits devem representar unidades lógicas concluídas.
 - Atualizar `STATUS.md` sempre que houver mudança de etapa, entrega, bloqueio ou próxima tarefa.
 - Atualizar este arquivo quando decisões de arquitetura, estrutura, segurança ou convenções forem confirmadas.
-- Se houver ambiguidade que afete segurança, custo, identidade ou conteúdo institucional, interromper e pedir confirmação em vez de presumir.
+- Se houver ambiguidade que afete identidade, conteúdo institucional ou experiência, interromper e pedir confirmação em vez de presumir.
