@@ -28,7 +28,9 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .site-shell { width: min(100% - 48px, 1240px); margin-inline: auto; }
 
 .site-header { box-shadow: 0 8px 30px rgba(16,43,67,.035); }
-.brand-placeholder { display: inline-flex; align-items: center; gap: 3px; }
+.brand-placeholder { display: inline-flex; align-items: center; gap: 10px; }
+.brand-placeholder__symbol { display: block; width: auto; height: 38px; max-width: 38px; object-fit: contain; }
+.brand-placeholder__name { display: inline-flex; align-items: center; font-size: 1.9rem; line-height: 1; font-weight: 900; letter-spacing: -.075em; color: var(--color-ink); }
 .brand-placeholder__name { font-size: 1.9rem; font-weight: 900; letter-spacing: -.09em; color: var(--color-ink); }
 .brand-placeholder__dot { width: 9px; height: 9px; margin-top: 14px; border-radius: 50%; background: linear-gradient(135deg,var(--color-cyan),var(--color-green)); }
 .nav-link { position: relative; padding: 10px 0; color: #526779; font-size: .83rem; font-weight: 600; transition: color .2s ease; }
