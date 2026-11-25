@@ -1,7 +1,7 @@
 const siteAreas = [
   {
     number: "01",
-    title: "A VIplan",
+    title: "A Viplan",
     description: "Conheça a empresa, sua atuação e os valores que orientam seu trabalho.",
     href: "/sobre",
     tone: "blue",
@@ -16,7 +16,7 @@ const siteAreas = [
   {
     number: "03",
     title: "Produtos",
-    description: "Explore as soluções e possibilidades em vidro temperado.",
+    description: "Explore as peças e possibilidades em vidro temperado.",
     href: "/produtos",
     tone: "green",
   },
@@ -41,22 +41,22 @@ export default function HomePage() {
 
         <div className="site-shell hero-layout">
           <div className="hero-copy">
-            <span className="eyebrow">VIplan · Vidros Temperados</span>
+            <span className="eyebrow">Viplan · Vidros Temperados</span>
             <h1>
               O vidro abre
               <br />
               <span className="hero-title-accent">novas possibilidades.</span>
             </h1>
             <p className="hero-description">
-              Um novo espaço para conhecer a VIplan, explorar seus produtos,
-              acompanhar seus processos e descobrir diferentes aplicações do vidro.
+              Peças de vidro temperado com qualidade, cuidado e possibilidades
+              para diferentes projetos e aplicações.
             </p>
             <div className="hero-actions">
               <a className="button-primary" href="/produtos">
                 Explore nossos produtos <span aria-hidden="true">↗</span>
               </a>
               <a className="button-text" href="/sobre">
-                Conheça a VIplan <span aria-hidden="true">→</span>
+                Conheça a Viplan <span aria-hidden="true">→</span>
               </a>
             </div>
             <div className="hero-note">
@@ -65,34 +65,20 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="hero-art" aria-label="Composição abstrata de planos translúcidos inspirados no vidro">
-            <div className="glass-scene">
-              <div className="glass-scene__shadow" />
-              <div className="glass-sheet glass-sheet--back">
-                <span className="glass-sheet__shine" />
-              </div>
-              <div className="glass-sheet glass-sheet--middle">
-                <span className="glass-sheet__shine" />
-              </div>
-              <div className="glass-sheet glass-sheet--front">
-                <span className="glass-sheet__shine" />
-              </div>
-              <div className="glass-color glass-color--blue" />
-              <div className="glass-color glass-color--green" />
-              <div className="glass-color glass-color--yellow" />
-              <div className="glass-caption">
-                <span className="glass-caption__eyebrow">VIplan</span>
-                <span className="glass-caption__title">Luz, cor<br />e transparência.</span>
-                <span className="glass-caption__index">01 — 04</span>
-              </div>
-              <span className="glass-spark glass-spark--one" />
-              <span className="glass-spark glass-spark--two" />
+          <div
+            aria-label="Fachada da Viplan"
+            className="hero-photo"
+            role="img"
+          >
+            <div className="hero-photo__wash" />
+            <div className="hero-photo__caption">
+              <span>Viplan</span>
+              <strong>Vidros temperados</strong>
             </div>
-            <span className="hero-art-label">Material · Forma · Possibilidade</span>
           </div>
         </div>
         <div className="hero-bottom site-shell">
-          <span>Uma experiência digital em construção</span>
+          <span>Qualidade e confiança em cada peça</span>
           <span aria-hidden="true">↓</span>
         </div>
       </section>
@@ -100,7 +86,7 @@ export default function HomePage() {
       <section className="intro-section section-space">
         <div className="site-shell intro-layout">
           <div>
-            <span className="eyebrow">Conheça a VIplan</span>
+            <span className="eyebrow">Conheça a Viplan</span>
             <h2 className="section-heading">
               Mais do que vidro.
               <br />
@@ -109,12 +95,12 @@ export default function HomePage() {
           </div>
           <div className="intro-aside">
             <p>
-              Cada ambiente pede uma solução. Aqui você encontra um ponto de
-              partida para conhecer a empresa, entender seu trabalho e descobrir
-              o universo de possibilidades do vidro.
+              Cada projeto pede uma solução. A Viplan trabalha com fabricação
+              e comercialização de peças de vidro temperado para diferentes
+              necessidades, aplicações e ambientes.
             </p>
             <a className="inline-link" href="/sobre">
-              Saiba mais sobre a VIplan <span aria-hidden="true">↗</span>
+              Saiba mais sobre a Viplan <span aria-hidden="true">↗</span>
             </a>
           </div>
         </div>
@@ -134,7 +120,7 @@ export default function HomePage() {
               <h2 className="section-heading">Um olhar sobre<br /><span>o que fazemos.</span></h2>
             </div>
             <p className="section-topline__text">
-              Navegue pelas áreas do site e conheça diferentes aspectos da VIplan.
+              Conheça a Viplan, suas peças, processos e possibilidades em vidro temperado.
             </p>
           </div>
 
@@ -156,17 +142,22 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="quality-strip">
-        <div className="site-shell quality-strip__inner">
-          <div>
-            <span className="eyebrow eyebrow--light">VIplan</span>
-            <h2>Conhecimento, cuidado<br />e atenção aos detalhes.</h2>
+      <section className="partnerships-section section-space">
+        <div className="site-shell partnerships-layout">
+          <div className="partnerships-copy">
+            <span className="eyebrow">Relacionamentos que constroem</span>
+            <h2 className="section-heading">Parcerias<br /><span>que fortalecem.</span></h2>
+            <p>
+              Valorizamos relações de confiança com empresas e profissionais
+              que compartilham o compromisso com qualidade, seriedade e bons
+              resultados.
+            </p>
           </div>
-          <a className="button-light" href="/qualidade">
-            Conheça nossa qualidade <span aria-hidden="true">↗</span>
-          </a>
-          <div aria-hidden="true" className="quality-strip__ribbon quality-strip__ribbon--one" />
-          <div aria-hidden="true" className="quality-strip__ribbon quality-strip__ribbon--two" />
+          <div className="partners-placeholder" aria-label="Espaço para apresentação dos parceiros da Viplan">
+            <span className="partners-placeholder__mark">V</span>
+            <strong>Nossos parceiros</strong>
+            <span>Marcas e empresas parceiras em breve</span>
+          </div>
         </div>
       </section>
 
