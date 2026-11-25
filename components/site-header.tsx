@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 
 const navigation = [
   { label: "Início", href: "/" },
@@ -18,31 +19,31 @@ export function SiteHeader() {
   return (
     <header className="site-header sticky top-0 z-50 border-b border-slate-200/70 bg-white/85 backdrop-blur-xl">
       <div className="site-shell flex min-h-[78px] items-center justify-between gap-6">
-        <a
+        <Link
           aria-label="VIplan — página inicial"
           className="brand-placeholder shrink-0"
           href="/"
         >
           <span className="brand-placeholder__name">VIplan</span>
           <span className="brand-placeholder__dot" aria-hidden="true" />
-        </a>
+        </Link>
 
         <nav aria-label="Navegação principal" className="hidden items-center gap-6 xl:flex">
           {navigation.map((item) => (
-            <a
+            <Link
               className="nav-link"
               href={item.href}
               key={item.href}
             >
               {item.label}
-            </a>
+            </Link>
           ))}
         </nav>
 
         <div className="flex items-center gap-3">
-          <a className="header-cta hidden sm:inline-flex" href="/contato">
+          <Link className="header-cta hidden sm:inline-flex" href="/contato">
             Fale com a VIplan <span aria-hidden="true">↗</span>
-          </a>
+          </Link>
           <button
             aria-controls="mobile-navigation"
             aria-expanded={menuOpen}
@@ -64,18 +65,18 @@ export function SiteHeader() {
           id="mobile-navigation"
         >
           {navigation.map((item) => (
-            <a
+            <Link
               href={item.href}
               key={item.href}
               onClick={() => setMenuOpen(false)}
             >
               {item.label}
               <span aria-hidden="true">↗</span>
-            </a>
+            </Link>
           ))}
-          <a className="mobile-navigation__cta" href="/contato" onClick={() => setMenuOpen(false)}>
+          <Link className="mobile-navigation__cta" href="/contato" onClick={() => setMenuOpen(false)}>
             Fale com a VIplan
-          </a>
+          </Link>
         </nav>
       )}
     </header>
