@@ -381,3 +381,29 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .site-footer__contact { grid-column: auto; }
   .site-footer__bottom > div { align-items: flex-start; flex-direction: column; justify-content: center; padding-top: 17px; padding-bottom: 17px; }
 }
+
+
+/* Explore cards: images managed in Supabase Storage */
+.area-card {
+  min-height: 390px;
+  padding-top: 0;
+}
+.area-card__image {
+  height: 158px;
+  flex: 0 0 158px;
+  margin: 0 -25px 21px;
+  border-radius: 4px 27px 0 0;
+  background-color: #e5eef2;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media (max-width: 760px) {
+  .area-card { min-height: 350px; padding-top: 0; }
+  .area-card__image {
+    height: 145px;
+    flex-basis: 145px;
+    margin: 0 -18px 18px;
+    border-radius: 3px 21px 0 0;
+  }
+}
