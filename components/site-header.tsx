@@ -20,12 +20,26 @@ export function SiteHeader() {
           className="brand-placeholder shrink-0"
           href="/"
         >
-          <img
-            alt=""
-            aria-hidden="true"
-            className="brand-placeholder__symbol"
-            src="/favicon.ico"
-          />
+          <span className="brand-placeholder__symbol-wrap" aria-hidden="true">
+            <img
+              alt=""
+              aria-hidden="true"
+              className="brand-placeholder__symbol"
+              src="/favicon.ico"
+              width={38}
+              height={38}
+              style={{
+                display: "block",
+                width: "38px",
+                height: "38px",
+                minWidth: "38px",
+                objectFit: "contain",
+                objectPosition: "center",
+                opacity: 1,
+                visibility: "visible",
+              }}
+            />
+          </span>
           <span className="brand-placeholder__name">Viplan</span>
         </Link>
 
