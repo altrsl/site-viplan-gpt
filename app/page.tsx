@@ -167,16 +167,20 @@ export default function HomePage() {
             <span className="eyebrow">Relacionamentos que constroem</span>
             <h2 className="section-heading">Parcerias<br /><span>que fortalecem.</span></h2>
             <p>
-              Valorizamos relações de confiança com empresas e profissionais
-              que compartilham o compromisso com qualidade, seriedade e bons
-              resultados.
+              Acreditamos que bons resultados começam com boas parcerias.
+              Queremos estar ao lado de empresas, profissionais e clientes
+              que valorizam qualidade, confiança e relações duradouras.
             </p>
+            <a className="button-primary partnerships-cta" href="/contato">
+              Seja nosso parceiro/cliente <span aria-hidden="true">↗</span>
+            </a>
           </div>
-          <div className="partners-placeholder" aria-label="Espaço para apresentação dos parceiros da Viplan">
+          <a className="partners-placeholder" href="/parceiros" aria-label="Conheça os parceiros da Viplan">
             <span className="partners-placeholder__mark">V</span>
             <strong>Nossos parceiros</strong>
-            <span>Marcas e empresas parceiras em breve</span>
-          </div>
+            <span>Conheça as empresas que caminham com a Viplan</span>
+            <span className="partners-placeholder__link">Conheça nossos parceiros <span aria-hidden="true">↗</span></span>
+          </a>
         </div>
       </section>
 
