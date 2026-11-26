@@ -1,3 +1,5 @@
+import { getSupabaseImageUrl } from "@/lib/supabase-images";
+
 const siteAreas = [
   {
     number: "01",
@@ -125,19 +127,36 @@ export default function HomePage() {
           </div>
 
           <div className="area-grid">
-            {siteAreas.map((area) => (
-              <a className={`area-card area-card--${area.tone}`} href={area.href} key={area.number}>
-                <div className="area-card__top">
-                  <span>{area.number}</span>
-                  <span aria-hidden="true" className="area-card__arrow">↗</span>
-                </div>
-                <div>
-                  <h3>{area.title}</h3>
-                  <p>{area.description}</p>
-                </div>
-                <span aria-hidden="true" className="area-card__line" />
-              </a>
-            ))}
+            {siteAreas.map((area) => {
+              const imageNames: Record<string, string> = {
+                "01": "a-viplan.webp",
+                "02": "fabricacao.webp",
+                "03": "produtos.webp",
+                "04": "projetos.webp",
+              };
+
+              return (
+                <a className={`area-card area-card--${area.tone}`} href={area.href} key={area.number}>
+                  <div
+                    aria-label={`Fotografia: ${area.title}`}
+                    className="area-card__image"
+                    role="img"
+                    style={{
+                      backgroundImage: `linear-gradient(180deg, rgba(16,43,67,.02), rgba(16,43,67,.20)), url("${getSupabaseImageUrl(`home/explore/${imageNames[area.number]}`)}")`,
+                    }}
+                  />
+                  <div className="area-card__top">
+                    <span>{area.number}</span>
+                    <span aria-hidden="true" className="area-card__arrow">↗</span>
+                  </div>
+                  <div>
+                    <h3>{area.title}</h3>
+                    <p>{area.description}</p>
+                  </div>
+                  <span aria-hidden="true" className="area-card__line" />
+                </a>
+              );
+            })}
           </div>
         </div>
       </section>
