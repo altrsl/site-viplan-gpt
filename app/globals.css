@@ -407,3 +407,36 @@ button, a { -webkit-tap-highlight-color: transparent; }
     border-radius: 3px 21px 0 0;
   }
 }
+
+
+/* Partnerships section: partner discovery and conversion CTA */
+.partnerships-copy > p { max-width: 500px; }
+.partnerships-cta { margin-top: 28px; }
+.partners-placeholder {
+  min-height: 310px;
+  padding: 34px;
+  cursor: pointer;
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+.partners-placeholder:hover {
+  transform: translateY(-6px);
+  border-color: rgba(32,184,210,.42);
+  box-shadow: 0 30px 65px rgba(16,43,67,.11);
+}
+.partners-placeholder__link {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+  color: var(--color-blue);
+  font-size: .82rem;
+  font-weight: 800;
+}
+.partners-placeholder__link span { color: var(--color-cyan); transition: transform .2s ease; }
+.partners-placeholder:hover .partners-placeholder__link span { transform: translate(3px,-3px); }
+@media (max-width: 760px) {
+  .partners-placeholder { min-height: 260px; }
+  .partnerships-cta { width: 100%; max-width: 340px; }
+}
